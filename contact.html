@@ -21,6 +21,13 @@
           <li><a href="reorientation.html">Démarche de réorientation</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
   <section class="section reveal reveal-delay-1">
     <div class="container">
       <div class="section-header">
@@ -29,33 +36,33 @@
       </div>
 
       <div class="contact-section">
-        <div class="contact-info reveal reveal-delay-2">
-          <h2>Entrons en contact</h2>
-          <p>Vous pouvez me contacter par email à l'adresse suivante pour toute question concernant ce portfolio ou ma candidature à la Licence Informatique.</p>
-          <a href="mailto:contact@tyvoryx.com" class="contact-email reveal reveal-delay-3">
+        <div class="contact-info reveal reveal-delay-2" style="min-width: 0;">
+          <h2 style="min-width: 0;">Entrons en contact</h2>
+          <p style="min-width: 0;">Vous pouvez me contacter par email à l'adresse suivante pour toute question concernant ce portfolio ou ma candidature à la Licence Informatique.</p>
+          <a href="mailto:contact@tyvoryx.com" class="contact-email reveal reveal-delay-3" style="min-width: 0;">
             <span>📧</span> contact@tyvoryx.com
           </a>
         </div>
 
-        <div class="contact-form reveal reveal-delay-4">
-          <form onsubmit="event.preventDefault(); alert('Merci pour votre message ! Il a été enregistré localement. Pour envoyer un email, utilisez contact@tyvoryx.com.');">
-            <div class="form-group">
-              <label for="contact-name">Nom complet</label>
-              <input type="text" id="contact-name" name="name" required placeholder="Votre nom">
+        <div class="contact-form reveal reveal-delay-4" style="min-width: 0;">
+          <form onsubmit="event.preventDefault(); alert('Merci pour votre message ! Pour envoyer un email, utilisez contact@tyvoryx.com.');" style="min-width: 0;">
+            <div class="form-group" style="min-width: 0;">
+              <label for="contact-name" style="min-width: 0;">Nom complet</label>
+              <input type="text" id="contact-name" name="name" required placeholder="Votre nom" style="min-width: 0;">
             </div>
-            <div class="form-group">
-              <label for="contact-email">Adresse e-mail</label>
-              <input type="email" id="contact-email" name="email" required placeholder="votre@email.com">
+            <div class="form-group" style="min-width: 0;">
+              <label for="contact-email" style="min-width: 0;">Adresse e-mail</label>
+              <input type="email" id="contact-email" name="email" required placeholder="votre@email.com" style="min-width: 0;">
             </div>
-            <div class="form-group">
-              <label for="contact-subject">Sujet</label>
-              <input type="text" id="contact-subject" name="subject" required placeholder="Objet de votre message">
+            <div class="form-group" style="min-width: 0;">
+              <label for="contact-subject" style="min-width: 0;">Sujet</label>
+              <input type="text" id="contact-subject" name="subject" required placeholder="Objet de votre message" style="min-width: 0;">
             </div>
-            <div class="form-group">
-              <label for="contact-message">Message</label>
-              <textarea id="contact-message" name="message" rows="5" required placeholder="Écrivez votre message..."></textarea>
+            <div class="form-group" style="min-width: 0;">
+              <label for="contact-message" style="min-width: 0;">Message</label>
+              <textarea id="contact-message" name="message" rows="5" required placeholder="Écrivez votre message..." style="min-width: 0;"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Envoyer le message</button>
+            <button type="submit" class="btn btn-primary btn-block" style="min-width: 0;">Envoyer le message</button>
           </form>
         </div>
       </div>
@@ -71,9 +78,3 @@
   <script src="js/main.js"></script>
 </body>
 </html>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Ouvrir le menu">
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
-    </div>
-  </header>
