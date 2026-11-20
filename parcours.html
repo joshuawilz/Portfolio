@@ -9,10 +9,10 @@
 </head>
 <body>
 
-  <header>
+    <header>
     <div class="container">
       <a href="index.html" class="logo">Portfolio<span>URCA</span></a>
-      <nav>
+      <nav aria-label="Navigation principale">
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Accueil</a></li>
           <li><a href="parcours.html" class="active">Parcours académique</a></li>
@@ -21,7 +21,14 @@
           <li><a href="reorientation.html">Démarche de réorientation</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-  <section class="section reveal reveal-delay-1">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Ouvrir le menu" aria-controls="navLinks" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+<section class="section reveal reveal-delay-1">
     <div class="container">
       <div class="section-header">
         <h2>Parcours académique</h2>
@@ -92,9 +99,3 @@
   <script src="js/main.js"></script>
 </body>
 </html>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Ouvrir le menu">
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
-    </div>
-  </header>

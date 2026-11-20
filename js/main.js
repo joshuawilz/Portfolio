@@ -11,17 +11,39 @@
   const navLinks = document.getElementById('navLinks');
 
   if (mobileMenuBtn && navLinks) {
+    function closeMenu() {
+      navLinks.classList.remove('open');
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      mobileMenuBtn.setAttribute('aria-label', 'Ouvrir le menu');
+    }
+
     mobileMenuBtn.addEventListener('click', function () {
       const isOpen = navLinks.classList.toggle('open');
-      mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+      mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
+      mobileMenuBtn.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
     });
 
     // Fermer le menu mobile lors du clic sur un lien
     navLinks.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        navLinks.classList.remove('open');
-        mobileMenuBtn.setAttribute('aria-expanded', 'false');
-      });
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Fermer au clic extérieur, avec Échap ou au passage sur desktop
+    document.addEventListener('click', function (event) {
+      if (!navLinks.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+        closeMenu();
+      }
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        closeMenu();
+        mobileMenuBtn.focus();
+      }
+    });
+    window.addEventListener('resize', function () {
+      if (window.innerWidth >= 900) {
+        closeMenu();
+      }
     });
   }
 
